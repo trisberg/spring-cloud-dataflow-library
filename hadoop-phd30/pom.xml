@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>hadoop-${spring-data-hadoop.distro}</artifactId>
+	<packaging>pom</packaging>
+	<description>Hadoop Library Definition for Pivotal HD 3.0</description>
+	<parent>
+		<groupId>org.springframework.cloud.dataflow.library</groupId>
+		<artifactId>spring-cloud-dataflow-library</artifactId>
+		<version>1.0.0.BUILD-SNAPSHOT</version>
+	</parent>
+	<properties>
+		<spring-data-hadoop.distro>phd30</spring-data-hadoop.distro>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-hadoop-boot</artifactId>
+			<version>${spring-data-hadoop.version}-${spring-data-hadoop.distro}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.mortbay.jetty</groupId>
+					<artifactId>jetty</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>tomcat</groupId>
+					<artifactId>jasper-compiler</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>tomcat</groupId>
+					<artifactId>jasper-runtime</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>javax.servlet</groupId>
+					<artifactId>servlet-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>javax.servlet.jsp</groupId>
+					<artifactId>jsp-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-hadoop-store</artifactId>
+			<version>${spring-data-hadoop.version}</version>
+		</dependency>
+	</dependencies>
+</project>

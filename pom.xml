@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.springframework.cloud.dataflow.library</groupId>
+	<artifactId>spring-cloud-dataflow-library</artifactId>
+	<version>1.0.0.BUILD-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<url>http://cloud.spring.io/spring-cloud-dataflow/</url>
+	<organization>
+		<name>Pivotal Software, Inc.</name>
+		<url>http://www.spring.io</url>
+	</organization>
+	<scm>
+		<url>https://github.com/spring-cloud/spring-cloud-dataflow-library</url>
+		<connection>scm:git:git://github.com/spring-cloud/spring-cloud-dataflow-library.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/spring-cloud/spring-cloud-dataflow-library.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+	<properties>
+		<java.version>1.7</java.version>
+		<spring-data-hadoop.version>2.3.0.RC1</spring-data-hadoop.version>
+	</properties>
+	<modules>
+		<module>hadoop-cdh5</module>
+		<module>hadoop-hdp23</module>
+		<module>hadoop-phd30</module>
+	</modules>
+	<repositories>
+		<repository>
+			<id>spring-snapshots</id>
+			<name>Spring Snapshots</name>
+			<url>http://repo.spring.io/snapshot</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>http://repo.spring.io/libs-milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>jcenter</id>
+			<name>JCenter Bintray</name>
+			<url>http://jcenter.bintray.com</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+</project>
